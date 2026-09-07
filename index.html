@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahayak | Emergency & Safety Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" 
+    integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- header  -->
+
+    <header id="header">
+        <a href="#" class="brand-logo">
+            <span class="logo-icon">🛡️</span>
+            <span class="logo-text">Sahayak</span>
+        </a>
+
+        <div class="nav-container">
+            <button id="menuToggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#firstaid">First Aid</a></li>
+                <li><a href="#kit">Emergency Kit</a></li>
+                <li><a href="#emergency">Services</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+                <li>
+                    <button class="nav-notif-btn" id="headerNotifBtn" title="Emergency Notifications">
+                        <span class="notif-bell"><i class="fa-solid fa-bell"></i></span>
+                        <span class="notif-badge" id="notifBadge">3</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <button id="theme" class="theme-btn" title="Toggle Light/Dark Theme">&#x1F319;</button>
+    </header>
+
+     <!-- Home section -->
+    <section class="hero">
+        <div>
+            <p class="tag">EMERGENCY & SAFETY HUB</p>
+            <h1>When every second matters.</h1>
+            <p>Quick, simple and actionable safety guidance when you need it most.</p>
+            <a href="#emergency" class="btn">Get Help Now</a>
+        </div>
+
+
+
+        <!-- SOS Card -->
+        <div class="sos-card">
+
+            <div class="sos-status">
+                <span class="pulse"></span>
+                Emergency SOS
+            </div>
+
+            <div class="sos-circle-container">
+                <button class="sos-button" id="sosButton">
+                    <strong>SOS</strong>
+                    <small>PRESS FOR HELP</small>
+                </button>
+            </div>
+
+            <p class="sos-description">
+                Press the button only during a real emergency.
+            </p>
+
+            <div class="sos-info">
+                <div>
+                    <strong>24/7</strong>
+                    <span>Available</span>
+                </div>
+
+                <div>
+                    <strong>3</strong>
+                    <span>Contacts</span>
+                </div>
+
+                <div>
+                    <strong>GPS</strong>
+                    <span>Location</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Emergency Guides -->
+
+    <main>
+
+        <section id="emergency">
+            <h2>🛡️ Emergency Guides</h2>
+            <p class="sub">Choose a situation to see immediate safety steps.</p>
+
+            <input id="search" placeholder="&#x1F5OD;Search: fire, accident, earthquake...">
+
+            <div class="grid" id="guides"></div>
+        </section>
+
+
+        <section id="firstaid">
+            <h2>&#128138; First Aid</h2>
+
+            <div class="grid">
+                <article class="card">
+                    <span>&#x1F525;</span>
+                    <h3>Minor Burn</h3>
+                    <p>Cool the affected area with clean running water and protect it with a clean covering.</p>
+                </article>
+
+                <article class="card">
+                    <span>&#x1F4A7;</span>
+                    <h3>Minor Cut</h3>
+                    <p>Wash your hands, gently clean the wound and apply clean pressure to control bleeding.</p>
+                </article>
+
+                <article class="card">
+                    <span>&#128067;</span>
+                    <h3>Nosebleed</h3>
+                    <p>Sit upright, lean slightly forward and gently pinch the soft part of the nose.</p>
+                </article>
+            </div>
+
+            <p class="warning"><i class="fas fa-exclamation-triangle"></i> For serious or life-threatening situations, seek professional emergency medical help
+                immediately.</p>
+        </section>
+
+        <!-- Emergency kit -->
+
+        <section id="kit">
+            <h2>&#x1F392; Emergency Kit</h2>
+            <p class="sub">Build your emergency kit and track your preparedness.</p>
+
+            <div class="kit">
+                <label><input type="checkbox"> &#x1F949; First-aid kit</label>
+                <label><input type="checkbox"> &#x1F526; Flashlight</label>
+                <label><input type="checkbox"> &#x1F50B; Extra batteries</label>
+                <label><input type="checkbox"> &#x1F4A6; Drinking water</label>
+                <label><input type="checkbox"> &#x1F373; Emergency food</label>
+                <label><input type="checkbox"> &#x1F50C; Power bank</label>
+                <label><input type="checkbox"> &#x1F4C4; Important documents</label>
+                <label><input type="checkbox"> &#x1F4E2; Emergency radio</label>
+            </div>
+
+            <div class="score">
+                <h3>Preparedness Score</h3>
+                <strong id="score">0%</strong>
+                <div class="bar"><i id="progress"></i></div>
+                <p id="status">Start preparing your emergency kit.</p>
+            </div>
+        </section>
+
+       <!-- Emergency Services -->
+        <!-- Quick Emergency -->
+        <section class="section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">QUICK HELP</span>
+                    <h2>Emergency Services</h2>
+                </div>
+
+                <p>Tap a service to contact the appropriate emergency department.</p>
+            </div>
+
+
+            <div class="service-grid">
+
+                <a class="service-card emergency-100" href="tel:100">
+                    <div class="service-icon">&#128274;</div>
+                    <div>
+                        <h3>Police</h3>
+                        <p>Emergency Police Assistance</p>
+                    </div>
+                    <strong>100</strong>
+                </a>
+
+                <a class="service-card emergency-108" href="tel:108">
+                    <div class="service-icon">&#128657;</div>
+                    <div>
+                        <h3>Ambulance</h3>
+                        <p>Medical Emergency</p>
+                    </div>
+                    <strong>108</strong>
+                </a>
+
+                <a class="service-card emergency-101" href="tel:101">
+                    <div class="service-icon">&#x1F525;</div>
+                    <div>
+                        <h3>Fire Service</h3>
+                        <p>Fire & Rescue</p>
+                    </div>
+                    <strong>101</strong>
+                </a>
+
+                <a class="service-card emergency-112" href="tel:112">
+                    <div class="service-icon">&#x1F4DE;</div>
+                    <div>
+                        <h3>Emergency</h3>
+                        <p>National Emergency Number</p>
+                    </div>
+                    <strong>112</strong>
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Contacts -->
+        <section class="section contacts-section" id="contacts">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">MY CONTACTS</span>
+                    <h2>Emergency Contacts</h2>
+                </div>
+
+                <button class="add-btn" id="addContactBtn">
+                    + Add Contact
+                </button>
+            </div>
+
+
+            <div class="contacts-grid">
+
+                <div class="contact-card">
+                    <div class="avatar">&#x1F4DE;</div>
+                    <div class="contact-details">
+                        <h3>Family Contact</h3>
+                        <p id="familyNumber">+91 XXXXX XXXXX</p>
+                    </div>
+                    <a href="tel:+910000000000" class="call-btn">&#9742;</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="avatar">&#x1F469;</div>
+                    <div class="contact-details">
+                        <h3>Emergency Contact</h3>
+                        <p>+91 XXXXX XXXXX</p>
+                    </div>
+                    <a href="tel:+910000000000" class="call-btn">&#9742;</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="avatar">&#x1F3E5;</div>
+                    <div class="contact-details">
+                        <h3>Nearest Hospital</h3>
+                        <p>Emergency Medical Help</p>
+                    </div>
+                    <a href="tel:108" class="call-btn">&#9742;</a>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- SOS Modal -->
+    <div class="modal-overlay" id="sosModal">
+
+        <div class="modal">
+
+            <div class="modal-icon">&#128680;</div>
+
+            <h2>Emergency SOS</h2>
+
+            <p>
+                Are you currently in an emergency?
+                This will prepare an emergency call.
+            </p>
+
+            <div class="modal-buttons">
+                <button class="cancel-btn" id="cancelSos">
+                    Cancel
+                </button>
+
+                <a href="tel:112" class="confirm-btn" id="confirmSos">
+                    Call 112
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Add Contact Modal -->
+    <div class="modal-overlay" id="contactModal">
+
+        <div class="modal">
+
+            <h2>Add Emergency Contact</h2>
+
+            <input type="text" id="contactName" placeholder="Contact name">
+
+            <input type="tel" id="contactPhone" placeholder="Phone number">
+
+            <div class="modal-buttons">
+                <button class="cancel-btn" id="closeContact">
+                    Cancel
+                </button>
+
+                <button class="confirm-btn" id="saveContact">
+                    Save Contact
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    Notification Toast
+    <div id="notification" class="notification">
+        <span id="notificationText"></span>
+    </div>
+
+    <!-- Emergency Notifications Modal -->
+    <div class="modal-overlay" id="notifModal">
+        <div class="modal notif-modal">
+            <h2> &#128680; Emergency Notifications</h2>
+            <div class="notif-list">
+                <div class="notif-item urgent">
+                    <span class="notif-icon"><i class="fa-solid fa-exclamation-triangle"></i></span>
+                    <div class="notif-content">
+                        <strong>Severe Weather Warning</strong>
+                        <p>Heavy rainfall and flash flood alert issued for coastal & low-lying areas. Stay indoors.</p>
+                        <small>10 mins ago</small>
+                    </div>
+                </div>
+                <div class="notif-item alert">
+                    <span class="notif-icon"><i class="fa-solid fa-fire"></i></span>
+                    <div class="notif-content">
+                        <strong>Heatwave Advisory</strong>
+                        <p>Extreme high temperature expected. Stay hydrated and avoid direct sunlight.</p>
+                        <small>1 hour ago</small>
+                    </div>
+                </div>
+                <div class="notif-item info">
+                    <span class="notif-icon"><i class="fa-solid fa-circle-exclamation"></i></span>
+                    <div class="notif-content">
+                        <strong>National Helpline Active</strong>
+                        <p>All emergency services (112, 100, 108, 101) are active with real-time response.</p>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="cancel-btn" id="closeNotif">Close</button>
+                <button class="confirm-btn" id="clearNotif">Mark All as Read</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h3>🛡️ Sahayak</h3>
+        <p>Information when you need it most.</p>
+        <small>© 2026 Sahayak | Safety starts with preparedness.</small>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
